@@ -1,0 +1,13 @@
+def persistence(num):
+    a = 0
+
+    while num >= 10:
+        b = 1
+        while num > 0:
+            b*= num % 10
+            num //= 10
+        num = b
+        a+= 1
+
+    return a
+print(persistence(125))
